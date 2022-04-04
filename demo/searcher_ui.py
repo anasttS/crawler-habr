@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.mylist_listWidget.setGeometry(QtCore.QRect(10, 90, 430, 600))
         self.mylist_listWidget.setObjectName("mylist_listWidget")
         MainWindow.setCentralWidget(self.centralwidget)
-        self.mylist_listWidget.itemClicked.connect(self.сlicked)
+        self.mylist_listWidget.itemClicked.connect(self.click_link)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
@@ -45,7 +45,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Habr search"))
         self.additem_pushButton.setText(_translate("MainWindow", "Search"))
 
-    def сlicked(self, item):
+    def click_link(self, item):
         webbrowser.open(item.text(), new=0, autoraise=True)
 
 
